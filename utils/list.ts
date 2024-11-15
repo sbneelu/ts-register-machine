@@ -3,23 +3,6 @@ import { Cons, Nil, TList } from '../types/primitives/list';
 import { Succ, TNatNum, Zero } from '../types/primitives/natnum';
 import { Pair } from '../types/primitives/pair';
 
-// export type FGetNth<
-//     List extends TList<T>,
-//     N extends TNatNum,
-//     DefaultValue extends T,
-//     T,
-// > = FFillListElementIfEmpty<List, DefaultValue, T> extends Cons<
-//     infer Head,
-//     infer Tail,
-//     T
-// >
-//     ? N extends Zero
-//         ? Head
-//         : N extends Succ<infer Pred>
-//         ? FGetNth<Tail, Pred, DefaultValue, T>
-//         : never
-//     : never;
-
 export type FSlice<
     List extends TList<T>,
     From extends TNatNum,
